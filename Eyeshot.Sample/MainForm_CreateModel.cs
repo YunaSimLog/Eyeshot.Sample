@@ -21,7 +21,8 @@ namespace Eyeshot.Sample
             CompositeCurve rrscc = CompositeCurve.CreateRoundedRectangle(Plane.YZ, 60, 120, 12, true);
             
             // 원형 생성
-            Circle circle = new Circle(Plane.YZ,400);
+            Circle circle = new Circle(Plane.YZ,40);
+            circle.Rotate(10, new Vector3D(new Point3D(0,0,0), new Point3D(0,1,0)));
 
             // 디자인에 형상 추가
             design1.Entities.Add(rrscc, design1.Layers[1].Name);
